@@ -2,7 +2,7 @@
 #include "Helper.h"
 #include <string.h>
 
-char* Helper::WriteAsn1Length(unsigned int length) //retruns the length encoding in a "string"
+char* Helper::WriteAsn1Length(unsigned int length, int* lengths_length) //retruns the length encoding in a "string"
 {
 	char* length_string = new char[6];
 	memset(length_string, 0, 6);//DANGER
@@ -24,6 +24,7 @@ char* Helper::WriteAsn1Length(unsigned int length) //retruns the length encoding
 	{
 		length_string[write_ptr++] = (char)(length);
 	}
+	*lengths_length = write_ptr;
 	return length_string;
 }
 

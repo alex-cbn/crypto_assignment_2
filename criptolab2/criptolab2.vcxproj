@@ -154,7 +154,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Asn1Integer.h" />
+    <ClInclude Include="Asn1ObjectIdentifier.h" />
     <ClInclude Include="Asn1PrintableString.h" />
+    <ClInclude Include="Asn1Sequence.h" />
     <ClInclude Include="Asn1Tlv.h" />
     <ClInclude Include="Asn1Utf8String.h" />
     <ClInclude Include="Helper.h" />
@@ -164,7 +166,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Asn1Integer.cpp" />
+    <ClCompile Include="Asn1ObjectIdentifier.cpp" />
     <ClCompile Include="Asn1PrintableString.cpp" />
+    <ClCompile Include="Asn1Sequence.cpp" />
     <ClCompile Include="Asn1Tlv.cpp" />
     <ClCompile Include="Asn1Utf8String.cpp" />
     <ClCompile Include="criptolab2.cpp" />

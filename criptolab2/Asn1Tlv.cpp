@@ -8,7 +8,14 @@ Asn1Tlv::Asn1Tlv(int type, int length, char * value)
 {
 	type_ = type;
 	length_ = length;
-	value_ = _strdup(value);
+	value_ = new char[length];
+	memcpy_s(value_,length, value, length);//WARNING
+	overall_length_ = 0;
+}
+
+Asn1Tlv::Asn1Tlv(char * raw_string)
+{
+	ReadRaw(raw_string);
 }
 
 void Asn1Tlv::WriteTlv(FILE * file_descriptor)
@@ -33,4 +40,33 @@ void Asn1Tlv::ReadTlv(FILE * file_descriptor)
 	value_ = new char[raw_size];//DANGER
 	_memccpy(value_, rawview + length_length + 1, 1, raw_size);//DANGER
 
+}
+
+char* Asn1Tlv::GetRaw()
+{
+	int additional_length = 0;
+	char* length_representation = Helper::WriteAsn1Length(length_, &additional_length);
+	overall_length_ = 1 + length_ + additional_length;
+	char* raw = new char[overall_length_];
+	raw[0] = char(type_);
+	memcpy_s(raw + 1, additional_length, length_representation, additional_length);
+	memcpy_s(raw + 1+additional_length, length_, value_, length_);
+	return raw;
+}
+
+void Asn1Tlv::ReadRaw(char* raw_form)
+{
+	//get type
+	type_ = raw_form[0];
+	//get length
+	int length_length = 0;
+	length_ = Helper::ReadAsn1Length(raw_form + 1, &length_length);
+	//get data
+	value_ = new char[length_];
+	memcpy_s(value_, length_, raw_form+1+length_length, length_);
+}
+
+int Asn1Tlv::GetActualLength()
+{
+	return overall_length_;
 }
