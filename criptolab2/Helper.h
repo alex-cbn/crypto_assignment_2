@@ -9,5 +9,7 @@ public:
 	static char* TextToHex(char* text);
 
 	static char* HexToText(char* text);
+
+
 };
 

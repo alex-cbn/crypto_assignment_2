@@ -17,7 +17,7 @@ Asn1Tlv & Asn1Sequence::GetTlv()
 {
 	char* content = NULL;
 	int sum_of_components = 0;
-	for (std::vector<IAsn1Value*>::size_type i = 0; i != contents_.size(); i++)
+	for (std::vector<IAsn1Value*>::size_type i = 0; i != contents_.size(); i++)//untested
 	{
 		Asn1Tlv tlvito = contents_[i]->GetTlv();//TODO define a proper constructor/operator overload
 		int old_size = sum_of_components;

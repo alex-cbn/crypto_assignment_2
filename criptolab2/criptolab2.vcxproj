@@ -153,6 +153,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Asn1Boolean.h" />
     <ClInclude Include="Asn1Integer.h" />
     <ClInclude Include="Asn1ObjectIdentifier.h" />
     <ClInclude Include="Asn1PrintableString.h" />
@@ -165,6 +166,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Asn1Boolean.cpp" />
     <ClCompile Include="Asn1Integer.cpp" />
     <ClCompile Include="Asn1ObjectIdentifier.cpp" />
     <ClCompile Include="Asn1PrintableString.cpp" />
