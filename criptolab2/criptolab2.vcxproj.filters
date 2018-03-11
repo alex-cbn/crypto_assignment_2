@@ -80,5 +80,8 @@
     <ClCompile Include="Asn1Boolean.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IAsn1Value.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

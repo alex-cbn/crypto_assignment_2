@@ -2,7 +2,7 @@
 #include "IAsn1Value.h"
 
 class Asn1Tlv;
-class Asn1ObjectIdentifier:IAsn1Value
+class Asn1ObjectIdentifier :public IAsn1Value
 {
 private:
 	int* values_;

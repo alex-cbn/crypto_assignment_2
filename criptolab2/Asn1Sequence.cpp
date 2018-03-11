@@ -21,6 +21,7 @@ Asn1Tlv & Asn1Sequence::GetTlv()
 	{
 		Asn1Tlv tlvito = contents_[i]->GetTlv();//TODO define a proper constructor/operator overload
 		int old_size = sum_of_components;
+		tlvito.GetRaw();
 		sum_of_components += tlvito.GetActualLength();
 		content = (char*)realloc(content, sum_of_components);
 		memcpy_s(content + old_size, sum_of_components - old_size, tlvito.GetRaw(), sum_of_components - old_size);		

@@ -3,6 +3,6 @@ class Asn1Tlv;
 class IAsn1Value
 {
 public:
-	virtual Asn1Tlv& GetTlv() = 0;
-	virtual void FillData(Asn1Tlv& tlv) = 0;
+	virtual Asn1Tlv& GetTlv();
+	virtual void FillData(Asn1Tlv& tlv);
 };

@@ -1,10 +1,34 @@
 #include "stdafx.h"
 #include "Asn1ObjectIdentifier.h"
 #include "Asn1Tlv.h"
+#include <string.h>
+#include <stdlib.h>
 
 Asn1ObjectIdentifier::Asn1ObjectIdentifier(char * values)
 {
-
+	values_ = new int[5];
+	values_[0] = 1;
+	values_[1] = 2;
+	values_[2] = 3;
+	values_[3] = 4;
+	values_[4] = 5;
+	values_length_ = 5;
+	/*int values_count= 0;
+	char* part = strtok(values, ".");
+	while (part !=NULL)
+	{
+		part = strtok(NULL, ".");
+		values_count++;
+	}
+	values_length_ = values_count;
+	values_ = new int[values_count];
+	values_count = 0;
+	char* part = strtok(values, ".");
+	while (part != NULL)
+	{
+		values_[values_count++] = atoi(part);
+		part = strtok(NULL, ".");
+	}*/
 }
 
 Asn1Tlv & Asn1ObjectIdentifier::GetTlv()

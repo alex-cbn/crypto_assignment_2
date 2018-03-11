@@ -4,7 +4,7 @@
 
 
 class Asn1Tlv;
-class Asn1Sequence :IAsn1Value
+class Asn1Sequence :public IAsn1Value
 {
 private:
 	std::vector<IAsn1Value*>contents_;

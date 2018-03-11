@@ -3,7 +3,7 @@
 #include <string.h>
 
 class Asn1Tlv;
-class Asn1PrintableString : IAsn1Value
+class Asn1PrintableString : public IAsn1Value
 {
 private:
 	char* value_;
