@@ -109,3 +109,8 @@ char* Helper::HexToText(char* text) //reads the hex representation and converts 
 	}
 	return result;
 }
+
+void Helper::DisplayError()
+{
+	printf("ERROR!\n"); //very helpful, right
+}

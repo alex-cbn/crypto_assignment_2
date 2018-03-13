@@ -20,4 +20,9 @@ Asn1Tlv & Asn1Boolean::GetTlv()
 
 void Asn1Boolean::FillData(Asn1Tlv & tlv)
 {
+	if (tlv.GetLength() != 1 || tlv.GetType() != 1)
+	{
+		Helper::DisplayError();
+	}
+	value_ = tlv.GetValue()[2];
 }

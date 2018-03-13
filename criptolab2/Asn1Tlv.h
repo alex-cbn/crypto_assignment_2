@@ -15,5 +15,10 @@ public:
 	void ReadTlv(FILE* file_descriptor);
 	char* GetRaw();
 	void ReadRaw(char* raw_form);
-	int GetActualLength();
+	//Getters
+	int GetActualLength();//broken :D
+	int GetType();
+	int GetLength();
+	char* GetValue();
+	int GetLengthLength();
 };

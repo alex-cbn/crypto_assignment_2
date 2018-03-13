@@ -9,7 +9,7 @@ Asn1Tlv::Asn1Tlv(int type, int length, char * value)
 	type_ = type;
 	length_ = length;
 	value_ = new char[length];
-	memcpy_s(value_,length, value, length);//WARNING
+	memcpy_s(value_, length, value, length);//WARNING
 	overall_length_ = 0;
 }
 
@@ -50,7 +50,7 @@ char* Asn1Tlv::GetRaw()
 	char* raw = new char[overall_length_];
 	raw[0] = char(type_);
 	memcpy_s(raw + 1, additional_length, length_representation, additional_length);
-	memcpy_s(raw + 1+additional_length, length_, value_, length_);
+	memcpy_s(raw + 1 + additional_length, length_, value_, length_);
 	return raw;
 }
 
@@ -63,10 +63,33 @@ void Asn1Tlv::ReadRaw(char* raw_form)
 	length_ = Helper::ReadAsn1Length(raw_form + 1, &length_length);
 	//get data
 	value_ = new char[length_];
-	memcpy_s(value_, length_, raw_form+1+length_length, length_);
+	memcpy_s(value_, length_, raw_form + 1 + length_length, length_);
 }
 
 int Asn1Tlv::GetActualLength()
 {
+	int additional_length = 0;
+	char* length_representation = Helper::WriteAsn1Length(length_, &additional_length);
+	overall_length_ = 1 + length_ + additional_length;
 	return overall_length_;
+}
+
+int Asn1Tlv::GetType()
+{
+	return type_;
+}
+
+int Asn1Tlv::GetLength()
+{
+	return length_;
+}
+
+char * Asn1Tlv::GetValue()
+{
+	return value_;
+}
+
+int Asn1Tlv::GetLengthLength()
+{
+	return GetActualLength() - length_ - 1;
 }

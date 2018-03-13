@@ -1,0 +1,17 @@
+fix classes hierarchy by renaming the interface into an actual class
+and adding a symbolic interface class just because
+
+
+
+Implement ObjectIdentifier GetTlv and FillData
+Implement FillData methods
+
+ENCODE:
+Object Id
+
+DECODE:
+ObjectId
+
+Other issues:
+Only positive integer decoding
+tlv methods

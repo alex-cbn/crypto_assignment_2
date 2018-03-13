@@ -10,5 +10,5 @@ Asn1Tlv & Asn1PrintableString::GetTlv()
 
 void Asn1PrintableString::FillData(Asn1Tlv & tlv)
 {
-
+	value_ = _strdup(tlv.GetValue());
 }

@@ -51,6 +51,21 @@ Asn1Tlv& Asn1Integer::GetTlv()
 
 void Asn1Integer::FillData(Asn1Tlv& tlv)
 {
-	//TODO
-
+	if (tlv.GetType() != 2)
+	{
+		Helper::DisplayError();
+	}
+	int length = tlv.GetLength();
+	int length_length = tlv.GetLengthLength();
+	char* data = tlv.GetValue();
+	value_ = 0;
+	for (int i = 0; i < length; i++)
+	{
+		value_ += (unsigned char)*data;
+		if (i != length - 1) 
+		{
+			value_ *= 256;
+		}
+		data++;
+	}
 }

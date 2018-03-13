@@ -1,9 +1,9 @@
 #pragma once
-#include "IAsn1Value.h"
+#include "Asn1Value.h"
 class Asn1Tlv;
 
 class Asn1Boolean :
-	public IAsn1Value
+	public Asn1Value
 {
 private:
 	bool value_;

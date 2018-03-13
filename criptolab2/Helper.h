@@ -10,6 +10,6 @@ public:
 
 	static char* HexToText(char* text);
 
-
+	static void DisplayError();
 };
 

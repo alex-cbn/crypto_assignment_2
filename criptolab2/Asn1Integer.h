@@ -1,8 +1,8 @@
 #pragma once
-#include "IAsn1Value.h"
+#include "Asn1Value.h"
 
 class Asn1Tlv;
-class Asn1Integer : public IAsn1Value
+class Asn1Integer : public Asn1Value
 {
 private:
 	int value_;

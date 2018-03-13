@@ -13,6 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Asn1">
+      <UniqueIdentifier>{7f07747c-885f-45b5-8275-a88d85f5bfe4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Asn1\Types">
+      <UniqueIdentifier>{37a7b141-8da4-4368-8eff-0a76b3cf15d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Helpers">
+      <UniqueIdentifier>{1ced59ea-6795-4085-a8d1-7ed5e0fcb28e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Asn1">
+      <UniqueIdentifier>{fb1db2e3-a35e-4132-9d16-8dcc0d60f594}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Helper">
+      <UniqueIdentifier>{c3254da5-ecb8-47d0-98e3-06974c5c89e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Asn1\Types">
+      <UniqueIdentifier>{1c1b79ac-2732-4afc-8a1d-3414b2cb8127}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -21,32 +39,38 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Asn1Tlv.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Helper.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IAsn1Value.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Asn1Boolean.h">
+      <Filter>Header Files\Asn1\Types</Filter>
     </ClInclude>
     <ClInclude Include="Asn1Integer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Asn1PrintableString.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Asn1Utf8String.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Asn1\Types</Filter>
     </ClInclude>
     <ClInclude Include="Asn1ObjectIdentifier.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Asn1\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Asn1PrintableString.h">
+      <Filter>Header Files\Asn1\Types</Filter>
     </ClInclude>
     <ClInclude Include="Asn1Sequence.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Asn1\Types</Filter>
     </ClInclude>
-    <ClInclude Include="Asn1Boolean.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Asn1Utf8String.h">
+      <Filter>Header Files\Asn1\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Helper.h">
+      <Filter>Header Files\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Asn1Tlv.h">
+      <Filter>Header Files\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Asn1Factory.h">
+      <Filter>Header Files\Asn1</Filter>
+    </ClInclude>
+    <ClInclude Include="Asn1Value.h">
+      <Filter>Header Files\Asn1</Filter>
+    </ClInclude>
+    <ClInclude Include="IAsn1Value.h">
+      <Filter>Header Files\Asn1</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -56,32 +80,38 @@
     <ClCompile Include="criptolab2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Asn1Tlv.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Helper.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Asn1Boolean.cpp">
+      <Filter>Source Files\Asn1\Types</Filter>
     </ClCompile>
     <ClCompile Include="Asn1Integer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Asn1PrintableString.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Asn1Utf8String.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Asn1\Types</Filter>
     </ClCompile>
     <ClCompile Include="Asn1ObjectIdentifier.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Asn1\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Asn1PrintableString.cpp">
+      <Filter>Source Files\Asn1\Types</Filter>
     </ClCompile>
     <ClCompile Include="Asn1Sequence.cpp">
+      <Filter>Source Files\Asn1\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Asn1Tlv.cpp">
+      <Filter>Source Files\Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Asn1Utf8String.cpp">
+      <Filter>Source Files\Asn1\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Helper.cpp">
+      <Filter>Source Files\Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Asn1Factory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Asn1Boolean.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Asn1Value.cpp">
+      <Filter>Source Files\Asn1</Filter>
     </ClCompile>
-    <ClCompile Include="IAsn1Value.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="TODO.txt" />
   </ItemGroup>
 </Project>

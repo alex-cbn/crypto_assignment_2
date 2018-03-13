@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 Asn1ObjectIdentifier::Asn1ObjectIdentifier(char * values)
-{
+{//TODO
 	values_ = new int[5];
 	values_[0] = 1;
 	values_[1] = 2;
@@ -46,7 +46,7 @@ Asn1Tlv & Asn1ObjectIdentifier::GetTlv()
 		else
 		{
 			//da sigur
-			printf("I am lazy\n");
+			printf("I am lazy\n"); //TODO
 		}
 	}
 	Asn1Tlv* tlv = new Asn1Tlv(0x6, write_ptr, encoded);

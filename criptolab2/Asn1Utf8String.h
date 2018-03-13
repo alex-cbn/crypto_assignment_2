@@ -1,9 +1,9 @@
 #pragma once
-#include "IAsn1Value.h"
+#include "Asn1Value.h"
 #include <string.h>
 
 class Asn1Tlv;
-class Asn1UTF8String : public IAsn1Value
+class Asn1UTF8String : public Asn1Value
 {
 private:
 	char* value_;

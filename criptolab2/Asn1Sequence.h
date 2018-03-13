@@ -1,16 +1,16 @@
 #pragma once
-#include "IAsn1Value.h"
+#include "Asn1Value.h"
 #include <vector>
 
 
 class Asn1Tlv;
-class Asn1Sequence :public IAsn1Value
+class Asn1Sequence :public Asn1Value
 {
 private:
-	std::vector<IAsn1Value*>contents_;
+	std::vector<Asn1Value*>contents_;
 public:
 	Asn1Sequence();
-	void Add(IAsn1Value* object);
+	void Add(Asn1Value* object);
 	Asn1Tlv & GetTlv();
 	void FillData(Asn1Tlv& tlv);
 };
